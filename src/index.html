@@ -9,46 +9,56 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Mono" rel="stylesheet">
 </head>
 <body>
+    <div class="topNav">
+        <h1><span class="nobreak">Colin Sandlin.</span></h1>
+        <nav>
+            <a href="#home"><img src="home.svg" alt="home icon"></a>
+            <a href="#home"><img src="history.svg" alt="log icon"></a>
+            <a href="#home"><img src="link.svg" alt="link icon"></a>
+        </nav>
+    </div>
     <div class="mainDiv">
         <div class="imagewrap">
             <img class="colin" src="__ProfilePic_small copy.jpg" alt="Name">
         </div>
-        <h1>Daily Journal</h1>
-        <form action="">
-            <div class="pieceOfForm">
-                <fieldset class="calendar bigBox">
-                    <label for="journalDate">Date of Entry:</label>
-                    <input type="date" name="journalDate" id="journalDate">
-                </fieldset>
-            </div>
-            <div class="pieceOfForm">
-                <fieldset class="conceptsCovered bigBox">
-                    <label for="conceptsCovered">Concepts Covered:</label>
-                    <input type="text" id="conceptsCovered">
-                </fieldset>
-            </div>
-                <fieldset class="journalEntry bigBox">
-                        <label for="journalEntry">Journal Entry:</label>
-                        <textarea class="textArea" name="area">
-                        </textarea>
-                </fieldset>
-            <div class="pieceOfForm">
-                <fieldset class="howIFeel bigBox">
-                        <label for="howIFeel">How I feel about this section</label>
-                        <select name="howIFeel" size="1">
-                            <option value="Terrible">😵</option>
-                            <option value="Not Great">😕</option>
-                            <option value="Okay">😐</option>
-                            <option value="Good">🙂</option>
-                            <option value="Great">😁</option>
-                        </select>
-                </fieldset>
-            </div>
-            <div class="pieceOfForm">
-                <button class="bigBox" type="button" onclick="alert('Thanks for the Entry!')">I submit to you</button>
-            </div>
+        <div class="blackbox">
+            <h1>Daily Journal</h1>
+            <form action="">
+                <div class="pieceOfForm">
+                    <fieldset class="calendar bigBox">
+                        <label for="journalDate">Date of Entry:</label>
+                        <input type="date" name="journalDate" id="journalDate">
+                    </fieldset>
+                </div>
+                <div class="pieceOfForm">
+                    <fieldset class="conceptsCovered bigBox">
+                        <label for="conceptsCovered">Concepts Covered:</label>
+                        <input type="text" id="conceptsCovered">
+                    </fieldset>
+                </div>
+                    <fieldset class="journalEntry bigBox">
+                            <label for="journalEntry">Journal Entry:</label>
+                            <textarea class="textArea" name="area">
+                            </textarea>
+                    </fieldset>
+                <div class="pieceOfForm">
+                    <fieldset class="howIFeel bigBox">
+                            <label for="howIFeel">How I feel about this section</label>
+                            <select name="howIFeel" size="1">
+                                <option value="Terrible">😵</option>
+                                <option value="Not Great">😕</option>
+                                <option value="Okay">😐</option>
+                                <option value="Good">🙂</option>
+                                <option value="Great">😁</option>
+                            </select>
+                    </fieldset>
+                </div>
+                <div class="pieceOfForm">
+                    <button class="bigBox" type="button" onclick="alert('Thanks for the Entry!')">I submit to you</button>
+                </div>
+                </form>
             </form>
-        </form>
+        </div>
     </div>
 </body>
 </html>
