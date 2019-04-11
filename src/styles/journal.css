@@ -11,30 +11,37 @@ body {
     width: 100%;
     background-color: #9e7bb2;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: flex-start;
+    justify-content: center;
     
 }
 
 .topNav img:hover {
     transition: .2s ease-in-out;
     transform: translateX(-5%) translateY(-5%);
-    transform-origin: center;
-    
-    
+    transform-origin: center;   
+}
+
+.topNav h1 {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .topNav nav{
-    margin-left:auto; 
+    display: flex;
+    flex-direction: row;
+    margin-left: auto; 
     margin-right: 10px;
 }
 
+nav>a {
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+}
 nav a img{
     width: 20px;
     height: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
     padding-right: 30px;
     fill:#569e26;
 }
