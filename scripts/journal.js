@@ -27,7 +27,34 @@ Add those new objects to your journal entries array. */
 
 const objectsJournalEntry = {
     date: "April 11, 2019",
-    concepts: ["JS Objects", "Key-value Pairs", "Functions"],
+    concepts: "key-value pairs, intro to functions"
     textArea: "Today I learned a lot that I didn't know about objects and how they can be utilized",
     feeling: "🙂",
 }
+
+const journalEntries = [];
+
+
+const journalEntry0= {
+    dateOfEntry: "April 12, 2019",
+    conceptsCoveres: "Beginning Functions",
+    textArea: "today I learned about functions",
+    moodOfTheDay: "🙂"
+};
+
+const journalEntry1= {
+    dateOfEntry: "April 13, 2019",
+    conceptsCoveres: "Working on loops",
+    textArea: "today I learned a lot about loops and practiced with them.",
+    moodOfTheDay: "🙂"
+};
+
+const journalEntry2= {
+    dateOfEntry: "April 15, 2019",
+    conceptsCoveres: "practicing Functions",
+    textArea: "today I learned practiced functions even more",
+    moodOfTheDay: "🙂"
+};
+
+
+journalEntries.push(journalEntry0, journalEntry1, journalEntry2);
