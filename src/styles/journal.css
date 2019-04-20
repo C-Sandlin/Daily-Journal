@@ -1,90 +1,93 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    background-color:#aeefdf;
+  background-color: #aeefdf;
+  /* background-image: url("/90's.jpg"); */
 }
 
 .topNav {
-    height: 50px;
-    width: 100%;
-    background-color: #9e7bb2;
-    display: flex;
-    justify-content: center;
-    
+  height: 50px;
+  width: 100%;
+  background-color: #9e7bb2;
+  display: flex;
+  justify-content: center;
 }
 
 .topNav img:hover {
-    transition: .2s ease-in-out;
-    transform: translateX(-5%) translateY(-5%);
-    transform-origin: center;   
+  transition: 0.2s ease-in-out;
+  transform: translateX(-5%) translateY(-5%);
+  transform-origin: center;
 }
 
 .topNav h1 {
-    display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.topNav nav{
-    display: flex;
-    flex-direction: row;
-    margin-left: auto; 
-    margin-right: 10px;
+.topNav nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
-nav>a {
-    display: flex;
-    align-content: space-around;
-    justify-content: center;
+nav > a {
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
 }
-nav a img{
-    width: 20px;
-    height: auto;
-    padding-right: 30px;
-    fill:#569e26;
+nav a img {
+  width: 20px;
+  height: auto;
+  padding-right: 30px;
+  fill: #569e26;
 }
 
 form {
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
 }
 
 .mainDiv {
-    width: 70%;
-    margin: auto;
-    margin-top: 75px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-    background-color: #2b2b2b;
-    border-bottom: 20px solid #9e7bb2;
+  width: 70%;
+  margin: auto;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  background-color: #2b2b2b;
+  border-bottom: 20px solid #9e7bb2;
 }
 
 .imagewrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
-
-
- h1 {
-    font-family: 'Roboto Mono', monospace;
-    color: #F6C2C2;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-left: 20px;
+h1 {
+  font-family: "Roboto Mono", monospace;
+  color: #f6c2c2;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-left: 20px;
 }
-p, label, textarea, form, input, button {
-    font-family: 'Roboto Mono', monospace;
-    color: #F6C2C2;
-    text-align: center;
-    margin-bottom: 20px;
+p,
+label,
+textarea,
+form,
+input,
+button {
+  font-family: "Roboto Mono", monospace;
+  color: #f6c2c2;
+  text-align: center;
+  margin-bottom: 20px;
 }
 /* 
 font-family: 'Roboto Mono', monospace;
@@ -92,99 +95,98 @@ font-family: 'Abril Fatface', cursive;
 */
 
 fieldset {
-    border-style: none;
-    
-    padding: 2em;
-    margin: 0em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: .7;
-    background-color: 
-    
+  border-style: none;
+
+  padding: 2em;
+  margin: 0em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  background-color: ;
 }
 fieldset:hover {
-    opacity: 1;
-    transition: 2s;
-    background-color: #3f3f3f;
+  opacity: 1;
+  transition: 2s;
+  background-color: #3f3f3f;
 }
 
-
-input, textarea, select {
-    display: inline-block;
-    margin: auto;
-    color: white;
-    background-color:#2b2b2b;
+input,
+textarea,
+select {
+  display: inline-block;
+  margin: auto;
+  color: white;
+  background-color: #2b2b2b;
 }
 
 .textArea {
-    width: 75%;
-    border-radius: 1px;
-    border-style: none;
-    border-bottom: 1px solid #F6C2C2;
+  width: 75%;
+  border-radius: 1px;
+  border-style: none;
+  border-bottom: 1px solid #f6c2c2;
 }
 
 .conceptsCovered input {
-    width: 75%;
-    border-radius: 1px;
-    border-style: none;
-    border-bottom: 1px solid #F6C2C2;
+  width: 75%;
+  border-radius: 1px;
+  border-style: none;
+  border-bottom: 1px solid #f6c2c2;
 }
 
 .calendar input {
-    width: 75%;
-    border-radius: 1px;
-    border-style: none;
-    border-bottom: 1px solid #F6C2C2;
+  width: 75%;
+  border-radius: 1px;
+  border-style: none;
+  border-bottom: 1px solid #f6c2c2;
 }
 
 select option {
-    height: 300%;
-    border-style: none;
-    border-bottom: 1px solid #F6C2C2;
+  height: 300%;
+  border-style: none;
+  border-bottom: 1px solid #f6c2c2;
 }
 
 button {
-    margin-top: 30px;
-    padding: 15px;
-    background-color:  #F6C2C2;
-    color: #2b2b2b;
-
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f6c2c2;
+  color: #2b2b2b;
 }
 
 button:hover {
-    transition: .2s ease-in-out;
-    transform: scale(1.1);
-    transform-origin: center;
+  transition: 0.2s ease-in-out;
+  transform: scale(1.1);
+  transform-origin: center;
 }
 
 .colin {
-    border-radius: 50%;
-    width: 150px;
-    height: auto;
-    border: 1px solid #F6C2C2;
+  border-radius: 50%;
+  width: 150px;
+  height: auto;
+  border: 1px solid #f6c2c2;
 }
 
 h1 {
-    font-family: 'Roboto Mono', monospace;
-    color: #F6C2C2;
-    letter-spacing: 1px;
-    text-align: center;
+  font-family: "Roboto Mono", monospace;
+  color: #f6c2c2;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 .blackbox {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .topNav h1 {
-    width: auto;
-    margin-right: 100px;
-    font-size: 1em;
-    color: white;
+  width: auto;
+  margin-right: 100px;
+  font-size: 1em;
+  color: white;
 }
 
 span.nobreak {
-    white-space: nowrap;
-  }
+  white-space: nowrap;
+}

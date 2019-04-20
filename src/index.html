@@ -38,13 +38,13 @@
                 </div>
                     <fieldset class="journalEntry bigBox">
                             <label for="journalEntry">Journal Entry:</label>
-                            <textarea class="textArea" name="area">
+                            <textarea class="textArea" name="area" id="textField">
                             </textarea>
                     </fieldset>
                 <div class="pieceOfForm">
                     <fieldset class="howIFeel bigBox">
                             <label for="howIFeel">How I feel about this section</label>
-                            <select name="howIFeel" size="1">
+                            <select name="howIFeel" size="1" id="journalMood">
                                 <option value="Terrible">😵</option>
                                 <option value="Not Great">😕</option>
                                 <option value="Okay">😐</option>
@@ -60,6 +60,7 @@
             </form>
         </div>
     </div>
+    <section id="publishedEntries"></section>
     <script src="scripts/journal.js"></script>
 </body>
 </html>
