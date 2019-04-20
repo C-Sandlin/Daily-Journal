@@ -1,0 +1,28 @@
+{
+  "journalEntries": [
+    {
+      "dateOfEntry": "April 11, 2019",
+      "conceptsCovered": "key-value pairs, intro to functions",
+      "textField": "Today I learned a lot that I didn't know about objects and how they can be utilized",
+      "moodOfTheDay": "🙂"
+    },
+    {
+      "dateOfEntry": "April 12, 2019",
+      "conceptsCovered": "Beginning Functions",
+      "textField": "today I learned about functions",
+      "moodOfTheDay": "🙂"
+    },
+    {
+      "dateOfEntry": "April 13, 2019",
+      "conceptsCovered": "Working on Loops",
+      "textField": "today I learned about loops and practiced with them",
+      "moodOfTheDay": "🙂"
+    },
+    {
+      "dateOfEntry": "April 15, 2019",
+      "conceptsCovered": "More Practice With Functions",
+      "textField": "today I practiced even more functions",
+      "moodOfTheDay": "🙂"
+    }
+  ]
+}

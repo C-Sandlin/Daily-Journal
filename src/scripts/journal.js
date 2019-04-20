@@ -1,60 +1,31 @@
-/* Single Journal Entry
-You defined form fields for the following bits of data to collect from a user of your application.
+let iterator = 0;
 
-Date of the journal entry.
-Concepts covered (which will be the title of the entry).
-The long-form contents of the journal entry.
-The mood of the journal entry.
-In your JavaScript file, define an object that will represent a journal entry in your code.
+function getEntries() {
+  fetch("http://localhost:3000/journalEntries") // Fetch from the API
+    .then(entries => entries.json()) // Parse as JSON
+    .then(parsedEntries => {
+      console.table(parsedEntries);
 
-/*
-    Define the keys and value for a JavaScript object that
-    represents a journal entry about what you learned today
-
-const objectsJournalEntry = {
-
+      parsedEntries.forEach(entry => {
+        createEntryFromStorage(entry);
+      });
+    });
 }
 
-Journal Entry Collection
-Eventually, you will have multiple journal entries, so you need to define an appropriately named variable that will have the value of an array.
+getEntries();
 
-Once you define that variable and give it a default value of a blank array, use the push() method to add the journalEntry object you defined above to the array.
-
-More Journal Entries
-Take a few minutes and define two or three more JavaScript objects to represent journal entries for some other things that you have learned about so far at NSS.
-
-Add those new objects to your journal entries array. */
-
-const objectsJournalEntry = {
-    date: "April 11, 2019",
-    concepts: "key-value pairs, intro to functions"
-    textArea: "Today I learned a lot that I didn't know about objects and how they can be utilized",
-    feeling: "🙂",
+function createEntryFromStorage(entry) {
+  const locaysh = document.querySelector("#publishedEntries");
+  iterator++;
+  locaysh.innerHTML += `
+      <div  id="entry-${iterator} class="past-entry">
+          <h1 class="entry-number">Journal Entry ${iterator}</h1>
+          <h3 class="entry-date">${entry.dateOfEntry}</h3>
+          <p class="entry-concepts">Concepts Covered: ${
+            entry.conceptsCovered
+          }</p>
+          <p class="entry-textField">Notes: ${entry.textField}</p>
+          <aside class="mood">I feel: ${entry.moodOfTheDay}</aside>
+      </div>
+      `;
 }
-
-const journalEntries = [];
-
-
-const journalEntry0= {
-    dateOfEntry: "April 12, 2019",
-    conceptsCoveres: "Beginning Functions",
-    textArea: "today I learned about functions",
-    moodOfTheDay: "🙂"
-};
-
-const journalEntry1= {
-    dateOfEntry: "April 13, 2019",
-    conceptsCoveres: "Working on loops",
-    textArea: "today I learned a lot about loops and practiced with them.",
-    moodOfTheDay: "🙂"
-};
-
-const journalEntry2= {
-    dateOfEntry: "April 15, 2019",
-    conceptsCoveres: "practicing Functions",
-    textArea: "today I learned practiced functions even more",
-    moodOfTheDay: "🙂"
-};
-
-
-journalEntries.push(journalEntry0, journalEntry1, journalEntry2);
