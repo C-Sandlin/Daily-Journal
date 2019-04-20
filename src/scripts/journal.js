@@ -29,3 +29,5 @@ function createEntryFromStorage(entry) {
       </div>
       `;
 }
+
+// new comments
