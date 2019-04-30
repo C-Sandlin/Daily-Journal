@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="topNav">
-        <h1><span class="nobreak">Colin Sandlin.</span></h1>
+        <img src="Colin-Logo.png">
         <nav>
             <a href="#home"><img src="home.svg" alt="home icon"></a>
             <a href="#home"><img src="history.svg" alt="log icon"></a>
@@ -45,22 +45,23 @@
                     <fieldset class="howIFeel bigBox">
                             <label for="howIFeel">How I feel about this section</label>
                             <select name="howIFeel" size="1" id="journalMood">
-                                <option value="Terrible">😵</option>
-                                <option value="Not Great">😕</option>
-                                <option value="Okay">😐</option>
-                                <option value="Good">🙂</option>
-                                <option value="Great">😁</option>
+                                <option value="😵">😵</option>
+                                <option value="😕">😕</option>
+                                <option value="😐">😐</option>
+                                <option value="🙂">🙂</option>
+                                <option value="😁">😁</option>
                             </select>
                     </fieldset>
                 </div>
                 <div class="pieceOfForm">
-                    <button class="bigBox" type="button" onclick="alert('Thanks for the Entry!')">I submit to you</button>
+                    <button class="bigBox" type="button" id="submitButton")">I submit to you</button>
                 </div>
-                </form>
             </form>
         </div>
     </div>
     <section id="publishedEntries"></section>
+    <script src="../scripts/entriesDOM.js"></script>
+    <script src="../scripts/data.js"></script>
     <script src="scripts/journal.js"></script>
 </body>
 </html>
