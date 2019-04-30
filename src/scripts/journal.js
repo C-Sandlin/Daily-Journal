@@ -1,33 +1,35 @@
-let iterator = 0;
+const submitButton = document.querySelector("#submitButton");
 
-function getEntries() {
-  fetch("http://localhost:3000/journalEntries") // Fetch from the API
-    .then(entries => entries.json()) // Parse as JSON
-    .then(parsedEntries => {
-      console.table(parsedEntries);
+submitButton.addEventListener("click", e => {
+  const captureDate = document.querySelector("#journalDate").value;
+  const captureConcepts = document.querySelector("#conceptsCovered").value;
+  const captureText = document.querySelector("#textField").value;
+  const captureMood = document.querySelector("#journalMood").value;
 
-      parsedEntries.forEach(entry => {
-        createEntryFromStorage(entry);
-      });
-    });
-}
+  console.log(captureDate, captureConcepts, captureMood, captureText);
 
-getEntries();
+  const newEntry = {
+    dateOfEntry: captureDate,
+    conceptsCovered: captureConcepts,
+    textField: captureText,
+    moodOfTheDay: captureMood
+  };
 
-function createEntryFromStorage(entry) {
-  const locaysh = document.querySelector("#publishedEntries");
-  iterator++;
-  locaysh.innerHTML += `
-      <div  id="entry-${iterator} class="past-entry">
-          <h1 class="entry-number">Journal Entry ${iterator}</h1>
-          <h3 class="entry-date">${entry.dateOfEntry}</h3>
-          <p class="entry-concepts">Concepts Covered: ${
-            entry.conceptsCovered
-          }</p>
-          <p class="entry-textField">Notes: ${entry.textField}</p>
-          <aside class="mood">I feel: ${entry.moodOfTheDay}</aside>
-      </div>
-      `;
-}
+  saveNewEntry(newEntry).then(parsedResult => {
+    console.log("what is the new item", parsedResult);
+  });
 
-// new comments
+  getEntries();
+});
+
+const saveNewEntry = newEntry => {
+  return fetch("http://localhost:8088/journalEntries", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newEntry)
+  }).then(response => response.json());
+};
+
+//need new fetch call to load all entries on page after new entry is saved
