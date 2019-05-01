@@ -29,7 +29,7 @@ const journalEntry2 = {
 };
 
 journalEntries.push(
-  objectJournalEntry,
+  objectsJournalEntry,
   journalEntry0,
   journalEntry1,
   journalEntry2

@@ -1,11 +1,9 @@
-let iterator = 0;
-
 function createEntryFromStorage(entry) {
   const locaysh = document.querySelector("#publishedEntries");
-  iterator++;
+
   locaysh.innerHTML += `
-      <div  id="entry-${iterator} class="past-entry">
-          <h1 class="entry-number">Journal Entry ${iterator}</h1>
+      <div  id="entry-${entry.id}" class="past-entry">
+          <h1 class="entry-number">Journal Entry ${entry.id}</h1>
           <h3 class="entry-date">${entry.dateOfEntry}</h3>
           <p class="entry-concepts">Concepts Covered: ${
             entry.conceptsCovered
