@@ -1,5 +1,7 @@
+const baseURL = "http://localhost:8088/";
+
 const getEntries = () => {
-  fetch("http://localhost:8088/journalEntries") // Fetch from the API
+  fetch(`${baseURL}journalEntries`) // Fetch from the API
     .then(entries => entries.json()) // Parse as JSON
     .then(parsedEntries => {
       parsedEntries.forEach(entry => {
@@ -9,7 +11,7 @@ const getEntries = () => {
 };
 
 const saveNewEntry = newEntry => {
-  return fetch("http://localhost:8088/journalEntries", {
+  return fetch(`${baseURL}journalEntries`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -17,3 +19,5 @@ const saveNewEntry = newEntry => {
     body: JSON.stringify(newEntry)
   }).then(response => response.json());
 };
+
+
