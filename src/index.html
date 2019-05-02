@@ -48,17 +48,41 @@
                         <label for="howIFeel">How I feel about this section</label>
                         <select name="howIFeel" size="1" id="journalMood">
                             <option value=""></option>
-                            <option value="😵">😵 Horrible</option>
-                            <option value="😕">😕 Not so great</option>
-                            <option value="😐">😐 Meh</option>
-                            <option value="🙂">🙂 Pretty good</option>
-                            <option value="😁">😁 Excellentay</option>
+                            <option value="Not Great">😵 Horrible</option>
+                            <option value="Uh Oh">😕 Not so great</option>
+                            <option value="Meh">😐 Meh</option>
+                            <option value="Pretty Good">🙂 Pretty good</option>
+                            <option value="Excellent">😁 Excellentay</option>
                         </select>
                     </fieldset>
                 </div>
                 <div class="pieceOfForm">
                     <button class="bigBox" type="button" id="submitButton" )">SUBMIT</button>
                 </div>
+                <hr>
+                <fieldset id="moodFilter">
+                    <legend>Filter Entries By Mood</legend>
+                    <div id="radio-label-1">
+                        <label>😵</label>
+                        <input id="radio1" name="moodButton" type="radio" value="Not Great">
+                    </div>
+                    <div id="radio-label-2">
+                        <label>😕</label>
+                        <input id="radio2" name="moodButton" type="radio" value="Uh Oh">
+                    </div>
+                    <div id="radio-label-3">
+                        <label>😐</label>
+                        <input id="radio3" name="moodButton" type="radio" value="Meh">
+                    </div>
+                    <div id="radio-label-4">
+                        <label>🙂</label>
+                        <input id="radio4" name="moodButton" type="radio" value="Pretty Good">
+                    </div>
+                    <div id="radio-label-5">
+                        <label>😁</label>
+                        <input id="radio5" name="moodButton" type="radio" value="Excellent">
+                    </div>
+                </fieldset>
             </form>
         </div>
     </div>
@@ -66,7 +90,7 @@
     <script src="../scripts/entriesDOM.js"></script>
     <script src="../scripts/data.js"></script>
     <script src="../scripts/journal.js"></script>
-    <script src="../scripts/journal_2.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>
