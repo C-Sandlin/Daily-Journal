@@ -1,69 +1,58 @@
 // load entries on page load
-
-function loadOnPage() {
-  getEntries().then(parsedEntries => {
-    createEntryFromStorage(parsedEntries);
-  });
-}
-
 document.addEventListener("load", loadOnPage());
 
+buttonArea.addEventListener("click", e => {
+  if (event.target.id === "submitButton") {
+    console.log(event.target.id);
+    // Listen for data added to form to clear "empty" messages
+    listenForInput(captureDate, "empty-date");
+    listenForInput(captureConcepts, "empty-concepts");
+    listenForInput(captureText, "empty-journal");
+    listenForInput(captureMood, "empty-mood");
 
-// locate and target submit button
-const submitButton = document.querySelector("#submitButton");
-submitButton.addEventListener("click", e => {
-  //target each form field and grab the entered values
-  const captureDate = document.querySelector("#journalDate").value;
-  const captureConcepts = document.querySelector("#conceptsCovered").value;
-  const captureText = document.querySelector("#textField").value;
-  const captureMood = document.querySelector("#journalMood").value;
-
-  if (
-    captureDate === "" ||
-    !captureConcepts ||
-    !captureText ||
-    captureMood === ""
-  ) {
-    alert("Please fill out all form fields before submitting.");
-    /* insert code here and in HTML to show message in red */
-  } else {
-    //create new object from entry
-    const newEntry = {
-      dateOfEntry: captureDate,
-      conceptsCovered: captureConcepts,
-      textField: captureText,
-      moodOfTheDay: captureMood
-    };
-    saveNewEntry(newEntry)
-      .then(parsedResult => {
-        document.querySelector("#mainForm").reset();
-        document.querySelector("#publishedEntries").innerHTML = "";
-        getEntries()
-          .then(parsedEntries => {
-            createEntryFromStorage(parsedEntries);
-          });
-
-      })
+    //check form field values - if empty, give warning that all need to be filled
+    if (captureDate.value === "") {
+      showFormIncomplete("empty-date");
+    }
+    if (!captureConcepts.value) {
+      showFormIncomplete("empty-concepts");
+    }
+    if (!captureText.value) {
+      showFormIncomplete("empty-journal");
+    }
+    if (captureMood.value === "") {
+      showFormIncomplete("empty-mood");
+    } else {
+      //create new object from entry
+      const newEntry = {
+        id: "",
+        dateOfEntry: captureDate.value,
+        conceptsCovered: captureConcepts.value,
+        textField: captureText.value,
+        moodOfTheDay: captureMood.value
+      };
+      saveNewEntry(newEntry).then(parsedResult => {
+        refre$h();
+        getEntries().then(parsedEntries => {
+          createEntryFromStorage(parsedEntries);
+        });
+      });
+    }
   }
-})
+});
 
-const radioButtons = document.getElementsByName("moodButton");
-radioButtons.forEach(button => {
-  button.addEventListener("click", event => {
-    let selectedMood = event.target.value;
-    getFilteredEntries(selectedMood);
-  })
-})
-
-const getFilteredEntries = (mood) => {
-  document.querySelector("#publishedEntries").innerHTML = "";
-  getEntries().then(fetchedEntries => {
-    let filteredResults = fetchedEntries.filter(entry => {
-      return entry.moodOfTheDay === `${mood}`;
-    });
-    createEntryFromStorage(filteredResults);
+const deleteOrEditEntry = () => {
+  const entryContainer = document.querySelector("#publishedEntries");
+  entryContainer.addEventListener("click", () => {
+    let targetId = event.target.id.split("--");
+    let idNumber = targetId[1];
+    let action = targetId[0];
+    if (action === "delete") {
+      runDelete(idNumber);
+    }
+    if (action === "edit") {
+      runEdit(idNumber);
+    }
   });
-}
-
-
-
+};
+deleteOrEditEntry();
